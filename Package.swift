@@ -7,7 +7,9 @@ let package = Package(
     products: [
         .library(name: "MobileEngageRichExtension", targets: ["MobileEngageRichExtension"])
     ],
-    dependencies: [],
+    dependencies: [
+        .package(url: "https://github.com/ddorizy/ios-core-sdk", Package.Dependency.Requirement.branch("master")),
+    ],
     targets: [
         .target(name: "MobileEngageRichExtension", path: "MobileEngage/RichNotificationExtension")
     ]
